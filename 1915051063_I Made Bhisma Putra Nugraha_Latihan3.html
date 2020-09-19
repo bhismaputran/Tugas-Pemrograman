@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website IMBPN</title>
+<!--Internal CSS-->
+    <style>
+        body {
+            background-color: azure;}
+        .header{
+            background-color:rgb(82, 178, 185);
+            width: 100%; overflow: hidden;}
+       
+        .header .logo img {
+            margin: 5px 15px 5px 15px;
+            width: 90px;
+            padding: 5px;}
+
+        .header .nav ul li {
+            float: right;
+            font-size: 16px;
+            margin-right: 15px;
+            display: block;}
+
+        .wrapper {
+            background-color: #DCDCDC;
+            float: left;
+            width: 100%}
+        .sidebar {
+            width: 30%;
+            float: left;}
+        .content {
+            background-color: #EEEEEE;
+            width: 70%;
+            float: right ;}
+        .footer {
+            background-color: rgb(2, 2, 39);
+            clear: both;
+            text-align: center;
+            padding: 15px;}
+    </style>
+<!--Internal CSS-->
+</head>
+<body>
+    <div class="container">
+    <header class="header">
+    <div class="logo">
+        <img src="Logo_IMBPN.jpg" alt="IMBPN_Channel" width="150" border="1" align="left">
+        <table>
+            <tbody style="font-size: 12mm;">
+                <tr>
+                    <td style="padding-left: 10mm; font-family: serif;  font-weight: bold;">Selamat Datang</td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 10mm; font-size: large; font-weight: bold;">di</td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 10mm; font-weight: bold; font-size: large;">Sistem Informasi Pendataan Karyawan IMBPN Channel</td>
+                </tr>
+        </table>
+    </div>
+    </header>
+    <header class="header">
+    <nav class="nav">
+        <ul>
+            <li>
+                <a href="1915051063_I Made Bhisma Putra Nugraha_Latihan1.html">Profile</a>
+            </li>
+            <li>
+                <a href="#logout">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+<div class="wrapper">
+<aside class="sidebar">
+    <div style="padding: 10px; font-size: 21px;">
+        <b>Menu</b><br>
+        <hr>
+        <a href="https://www.youtube.com/IMBPNChannel">Home</a><br/>
+        <a href="1915051063_I Made Bhisma Putra Nugraha_Latihan1.html">Biodata</a><br/>
+        <a href="1915051063_I Made Bhisma Putra Nugraha_Latihan2.html">Update Biodata</a><br/>
+        <a href="https://wa.me/+6287865488316">Contact</a><br/>
+    </div>
+</aside>
+<section>
+    <main class="content">
+        <div style="padding: 10px;">
+            <h2 style="margin: 0px;">Update Biodata Karyawan</h2>
+            <hr/>
+<form action=" formulir.php" method="post" onSubmit="return ValidasiForm()" name="FormReg">
+    <table>
+        <tr>
+<!--Kolom Nama-->
+            <td>Nama</td>
+            <td>:</td>
+            <td><input type="text" name="password" placeholder="Tuliskan Nama Anda"/></td>
+        </tr>
+        <tr>
+<!--Kolom Password-->
+            <td>Password</td>
+            <td>:</td>
+            <td><input type="password" name="password" placeholder="Tuliskan Password Anda"/></td>
+        </tr>
+        <tr>
+<!--Kolom Jenis Kelamin-->
+            <td>Jenis Kelamin</td>
+            <td>:</td>
+            <td>
+                <input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki
+                <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
+            </td>
+        </tr>
+        <tr>
+<!--Kolom Tanggal Lahir-->
+            <td>Tanggal Lahir</td>
+            <td>:</td>
+            <td> <input type="date" name="tanggal"></td>
+        </tr>
+<!--Kolom Hobby-->
+            <td>Hobby</td>
+            <td>:</td>
+            <td>
+                <input type="checkbox" value="hobby_pertama"> Menulis
+                <input type="checkbox" value="hobby_kedua"> Membaca Buku
+                <input type="checkbox" value="hobby_ketiga"> Traveling
+                <input type="text" name="Hobby_Lainnya" placeholder="Lainnya...">
+            </td>
+        <tr>
+        <tr>
+<!--Kolom Nomor Telepon-->
+            <td>Nomor Telepon</td>
+            <td>:</td>
+            <td><input type="number" name="no_hp"></td>
+        </tr>
+<!--Kolom Asal Kabupaten-->
+            <td>Asal Kabupaten/Kota</td>
+            <td>:</td>
+            <td>
+                <select name="asal_kabupaten" placeholder="Asal Kabupaten">
+                <option value="Karangasem"> Karangasem</option>
+                <option value="Buleleng"> Buleleng</option>
+                <option value="Badung"> Badung</option>
+                <option value="Denpasar"> Denpasar</option>
+                <option value="Klungkung"> Klungkung</option>
+                <option value="Gianyar"> Gianyar</option>
+                <option value="Bangli"> Bangli</option>
+                <option value="Tabanan"> Tabanan</option>
+                <option value="Jembrana"> Jembrana</option>
+                </select>
+                <input type="text" name="Hobby_Lainnya" placeholder="Lainnya...">
+            </td> 
+        </tr>
+        <tr>
+<!--Kolom Biografi-->
+            <td>Biografi</td>
+            <td>:</td>
+            <td>
+                <textarea name="biografi" rows="5" cols="20"></textarea>
+            </td>
+        </tr>
+        <tr>
+<!--Kolom Simpan dan Batal-->
+            <td colspan="3" align="right"><input type="submit" value="Simpan"><input type="reset" value="Batal"></td>
+        </tr>
+    </table>
+    </main>
+</section>
+<section>
+    </div>
+        <footer class="footer">
+            <font color="white">Copyright &#169; IMBPN Channel</white>
+        </footer>
+    </div>
+</section>
+</body>
+</html>
